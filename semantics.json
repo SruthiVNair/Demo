@@ -1,55 +1,39 @@
 [
-        {
-                "label":"Image",
-                "name": "image",
-                "type": "image"
-        },
-        {
-                  "name": "levels",
-                  "type": "select",
-                  "label": "Levels",
-                  "description": "Select Difficulty Levels",
-                  "options": [
-                    {
-                        "label": "3X3",
-                        "value" : "3"
-                    },
-                    {
-                      "label": "4x4",
-                      "value" : "4"
-                    },
-                    {
-                         "label": "5X5",
-                         "value" : "5"
-                    },
-                    {
-                         "label": "6X6",
-                         "value" : "6"
-                    },
-                    {
-                         "label": "7X7",
-                         "value" : "7"
-                    }
-                  ],
-                  "default" : "3"
-        },
-        {
-                  "name" : "chooseDifficulty",
-                  "type" : "select",
-                  "widget" : "radioGroup",
-                  "label" : "Allow user to choose difficulty",
-                  "alignment" : "horizontal",
-                  "importance" : "high",
-                  "options" : [
-                    {
-                      "label" : "Yes",
-                      "value" : "true"
-                    },
-                    {
-                      "label" : "No",
-                      "value" : "false"
-                    }
-                  ],
-                  "default" : "true"
-        }
+  {
+  "name": "hang",
+  "type": "list",
+  "label": "List of words",
+  "importance": "high",
+  "entity": "word",
+  "min": 1,
+  "defaultNum": 2,
+  "field": {
+    "name": "hang",
+    "type": "group",
+    "isSubContent": true,
+    "label": "TextAndHints",
+    "importance": "high",
+    "fields":[
+    {
+        "name": "EnterWord",
+        "type": "text",
+        "label": "Enter Word",
+        "importance": "high"
+      },
+      {
+        "label": "HintImage",
+        "name": "image",
+        "type": "image",
+        "description": "Image to be displayed as hint is added here..."
+      },
+      {
+        "label": "HintText",
+        "name": "hintText",
+        "type": "text",
+        "description": "INPUT THE HINT HERE..."
+      }
+
+            ]
+           }
+   }
 ]
